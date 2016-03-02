@@ -1,0 +1,46 @@
+{
+	// Theme Settings
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"centurion_color_blue": false,
+	"centurion_color_grey": false,
+	"centurion_color_orange": false,
+	"centurion_color_red": false,
+	"centurion_color_yellow": false,
+	
+    // Material Theme Settings
+    "material_theme_small_tab"                : true , // Set small tabs
+  	// "material_theme_disable_fileicons"        : true , // Hide siderbar file type icons
+  	// "material_theme_disable_folder_animation" : true , // Disable folder animation
+  	// "material_theme_small_statusbar"          : true , // Set small status bar
+  	// "material_theme_compact_sidebar"          : true , // Set compact sidebar
+  	// "material_theme_disable_tree_indicator"   : true , // Disable sidebar file indicator
+  	"material_theme_bold_tab"                 : true , // Make the tab labels bolder
+  	// "material_theme_tabs_separator"           : true , // Show tabs separator, this disables tab hover animation
+  	// "material_theme_accent_lime"              : true , // set green lime accent color
+  	// "material_theme_accent_purple"            : true , // set purple accent color
+  	// "material_theme_accent_red"               : true , // set pale red accent color
+  	// "material_theme_accent_orange"            : true , // set orange accent color
+  	// "material_theme_accent_yellow"            : true , // set yellow accent color
+  	"material_theme_accent_indigo"            : true , // set indigo accent color
+  	// "material_theme_panel_separator"          : true , // show bottom panel separator
+  	// "material_theme_tabs_autowidth"           : true , // Enable autowidth for tabs
+  	// "material_theme_contrast_mode"            : true , // Enable sidebar and panels contrast mode
+
+	// Color Schemes
+	"color_scheme": "Packages/Colorsublime - Themes/BatmanLight.tmTheme",
+	
+	// Extra settings
+	"overlay_scroll_bars": "enabled",
+    "line_padding_top": 2,
+    "line_padding_bottom": 2,
+    "always_show_minimap_viewport": true,
+    "bold_folder_labels": true,
+    "indent_guide_options": [ "draw_normal", "draw_active" ],   // Highlight active indent
+    "font_options": [ "gray_antialias" ],                       // For hidpi displays
+
+    // Ignores
+    "ignored_packages":
+	[
+		"Vintage"
+	]
+}
