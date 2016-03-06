@@ -5,6 +5,21 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+## Colors
+#
+
+## white 
+set foreground   #ffffff
+## black 
+set background   #000000
+## white 
+set cursorColor  #ffffff
+
+set $FOCUS       #7c65ab
+set $UNFOCUS     #7c65ab
+set $BORDERF     #00c3FF
+set $BORDERU     #00245E
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -34,10 +49,10 @@ floating_modifier $mod
 bindsym $mod+l exec ~/.config/i3/pixlock.sh
 
 # lock b/c inactivity
-exec "xautolock -time 15 -locker '~/.config/i3/pixlock.sh' &"
+exec xautolock -time 15 -locker '~/.config/i3/pixlock.sh' &
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/volcano.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/tarantula.jpg
 
 # Gaps
 gaps inner 30
@@ -45,54 +60,39 @@ gaps outer 3
 
 # borders
 #for_window [class="^.*"] border pixel 0
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 #new_window pixel 3
 #new_float pixel 3
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# start rofi
+bindsym $mod+d exec rofi -show run
+
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym Shift+$mod+d exec --no-startup-id j4-dmenu-desktop
 # standard dmenu
-bindsym Shift+$mod+d exec --no-startup-id dmenu_run
+#bindsym Shift+$mod+d exec --no-startup-id dmenu_run
 
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
+# change focus:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-#bindsym $mod+Shift+j move left
-#bindsym $mod+Shift+k move down
-#bindsym $mod+Shift+l move up
-#bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
+# move focused window:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# split control
 bindsym $mod+h split h
-
-# split in vertical orientation
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
@@ -188,14 +188,15 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     colors {
-           background #000000
+           background #3f3f3f
            statusline #ffffff
            separator #666666
 
-           focused_workspace  #008fff #007fff #ffffff
+                              #border backgnd forgrnd
+           focused_workspace  #7c65ab #7c65ab #ffffff
            active_workspace   #333333 #5f676a #ffffff
-	         inactive_workspace #333333 #222222 #888888
-      	   urgent_workspace   #aa0000 #990000 #ffffff
+         inactive_workspace #3f3f3f #3f3f3f #888888
+           urgent_workspace   #aa0000 #990000 #ffffff
     }
 
     position top
@@ -203,9 +204,9 @@ bar {
 
 }
 
-# Colors
-client.focused    #007fbf #007fbf #ffffff
-client.unfocused  #666666 #666666 #ffffff
+# Colors          #border backgnd forgrnd
+client.focused    #7c65ab #7c65ab #ffffff
+client.unfocused  #3f3f3f #3f3f3f #ffffff
 client.urgent     #aa0000 #990000 #ffffff
 
 # Multimedia Keys
@@ -222,6 +223,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Backlight Control Keys
 # increase backlight
-bindsym XF86MonBrightnessUp exec xbacklight -inc 1
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 # decrease backlight
-bindsym XF86MonBrightnessDown exec xbacklight -dec 1
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5

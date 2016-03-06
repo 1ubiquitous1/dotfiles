@@ -1,0 +1,114 @@
+! ------------------------------------------------------------------------------
+! X Settings
+! ------------------------------------------------------------------------------
+Xcursor.theme: Paper
+
+! ------------------------------------------------------------------------------
+! Xft Settings
+! ------------------------------------------------------------------------------
+
+Xft.dpi: 200
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! ------------------------------------------------------------------------------
+! URxvt Color Settings
+! ------------------------------------------------------------------------------
+
+! --- special colors ---
+
+*background: #3f3f3f
+*foreground: #ffffff
+
+! --- standard colors ---
+
+! black
+*color0: #000000
+
+! bright_black
+*color8: #3f3f3f
+
+! red
+*color1: #b8653b
+
+! bright_red
+*color9: #d69c7f
+
+! green
+*color2: #3bb865
+
+! bright_green
+*color10: #7fd69c
+
+! yellow
+*color3: #8eb83b
+
+! bright_yellow
+*color11: #b9d67f
+
+! blue
+*color4: #653bb8
+
+! bright_blue
+*color12: #9c7fd6
+
+! magenta
+*color5: #b83b8e
+
+! bright_magenta
+*color13: #d67fb9
+
+! cyan
+*color6: #3b8eb8
+
+! bright_cyan
+*color14: #7fb9d6
+
+! white
+*color7: #dadada
+
+! bright_white
+*color15: #ffffff
+
+! ------------------------------------------------------------------------------
+! URxvt Settings
+! ------------------------------------------------------------------------------
+
+URxvt.scrollBar: false
+URxvt*transparent: false
+URxvt*shading: 20
+URxvt*fading: 20
+URxvt*saveLines: 1000
+URxvt*buffered:	false
+
+URxvt.keysym.M-C-c:	perl:clipboard:copy
+URxvt.keysym.M-C-v:	perl:clipboard:paste
+
+URxvt.font: xft:DejaVuSansMono:pixelsize=25
+
+URxvt*letterSpace:  0
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+
+! ------------------------------------------------------------------------------
+! ROFI Settings
+! ------------------------------------------------------------------------------
+
+rofi.terminal:	urxvt
+rofi.lines:		5
+rofi.eh:		1f
+rofi.opacity:	50
+rofi.font:		DejaVuSansMono 25
+
+xterm*locale: true
+xterm*faceName: xft:DejaVuSansMono:pixelsize=25:antialias=true
