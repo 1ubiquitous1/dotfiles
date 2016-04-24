@@ -95,20 +95,28 @@ URxvt*letterSpace:  0
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+rofi.color-window: #3f3f3f, #7bfe1a, #7c65ab
+rofi.color-normal: #3f3f3f, #ffffff, #424242, #7c65ab, #ffffff
+rofi.color-active: #3f3f3f, #ffffff, #424242, #7c65ab, #ffffff
+rofi.color-urgent: #3f3f3f, #ffffff, #424242, #dc322f, #ffffff
 
 ! ------------------------------------------------------------------------------
 ! ROFI Settings
 ! ------------------------------------------------------------------------------
 
-rofi.terminal:	urxvt
-rofi.lines:		5
-rofi.eh:		1f
-rofi.opacity:	50
-rofi.font:		DejaVuSansMono 25
+rofi.padding: 1
+rofi.lines: 10    
+rofi.borderwidth: 0
+rofi.opacity: 100
+rofi.location: 7
+rofi.yoffset: 0
+rofi.xoffset: 0
+rofi.width: 100
+rofi.fixed_num_lines: 1
+rofi.hmode: false
+rofi.terminal: urxvt
+rofi.ssh-set-title: false
+rofi.font: DejaVuSansMono 25
 
 xterm*locale: true
 xterm*faceName: xft:DejaVuSansMono:pixelsize=25:antialias=true
